@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import HomeView from "./views/HomeView";
+import UserWiew from "./views/UserWiew";
+import ParametreView from "./views/ParametreView";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Link to="/">Ana Sayfa</Link>
+      {" "}
+      <Link to="/kullanici">Kullanıcı</Link>
+      {" "}
+      <Link to="/parametre/ekonomi/arac-sahipleri-dikkat-benzine-1-liralik-indirim-15217522-haberi/">Parametre Sayfası</Link>
+
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+        <Route path="/kullanici" element={<UserWiew />} />
+        <Route path="/parametre/:id" element={<ParametreView/>} />
+      </Routes>
     </div>
   );
 }
