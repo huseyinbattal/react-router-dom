@@ -11,7 +11,7 @@ function App() {
       {" "}
       <Link to="/kullanici">Kullanıcı</Link>
       {" "}
-      <Link to="/parametre/ekonomi/arac-sahipleri-dikkat-benzine-1-liralik-indirim-15217522-haberi/">Parametre Sayfası</Link>
+      <Link to="/parametre/abc-123">Parametre Sayfası</Link>
 
       <Routes>
         <Route path="/" element={<HomeView />} />
