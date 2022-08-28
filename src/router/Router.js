@@ -1,9 +1,9 @@
-import { Children } from 'react'
 import { useRoutes } from 'react-router-dom'
 import HomeView from '../views/HomeView'
 import NewView from '../views/NewView'
 import ParametreView from '../views/ParametreView'
 import QueryParamsViews from '../views/QueryParamsViews'
+import SportsNewsView from '../views/SportsNewsView'
 import UserWiew from '../views/UserWiew'
 
 
@@ -30,7 +30,10 @@ const Router = () => {
                 path: "/haberler/",
                 element: <NewView />,
                 children:[
-
+                    {
+                        path: "/sporhaberleri",
+                        element:<SportsNewsView/>
+}
                 ]
             },
             {

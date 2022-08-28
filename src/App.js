@@ -55,11 +55,6 @@ function App() {
           <Route path="/queryparametre" element={<QueryParamsViews />} />
 
           <Route path="/haberler" element={<NewView />}>
-            <Route
-              index
-              element={<Navigate to="/haberler/sporhaberleri"/>}
-            />
-            <Route path="sporhaberleri" element={<SportsNewsView />} />
             <Route path="ekonomihaberleri" element={<EconomyNewsView />}>
               <Route
                 index
