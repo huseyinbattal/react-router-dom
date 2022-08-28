@@ -68,7 +68,6 @@ function App() {
               <Route path=":id" element={<EconomyNewsView />} />
             </Route>
           </Route>
-          <Route path="*" element={<div>404 Not Found!!!</div>}></Route>
         </Routes>
       </div>
     </div>
