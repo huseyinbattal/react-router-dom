@@ -22,7 +22,10 @@ function App() {
       <br/>
         <Link to="/haberler">Haberler</Link>
         <br />
-      <Link to="/haberler/sporhaberleri">Spor Haberleri</Link>
+        <Link to="/haberler/sporhaberleri">Spor Haberleri</Link>
+        <br />
+      <Link to="/haberler/ekonomihaberleri">Ekonomi Haberleri</Link>
+        
         
       </div>
 
