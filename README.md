@@ -1,3 +1,6 @@
+<img width="1278" alt="Ekran Resmi 2022-08-28 17 39 57" src="https://user-images.githubusercontent.com/95706081/187079770-4266b668-bd88-4946-9d8b-1dcd14b07831.png">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
