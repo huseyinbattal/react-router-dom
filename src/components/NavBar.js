@@ -8,7 +8,7 @@ function NavBar() {
         style={{
           backgroundColor: "lightgreen",
           padding: "10px",
-          borderRadius: "30px",
+          borderRadius: "10px",
           margin: "10px",
         }}
       >

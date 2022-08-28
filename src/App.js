@@ -14,7 +14,7 @@ function App() {
           backgroundColor: "lightgreen",
           padding: "10px",
           color: "red",
-          borderRadius: "50px",
+          borderRadius: "10px",
           margin: "10px",
         }}
       >

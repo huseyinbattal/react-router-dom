@@ -5,14 +5,16 @@ import NewView from "../views/NewView";
 import ParametreView from "../views/ParametreView";
 import QueryParamsViews from "../views/QueryParamsViews";
 import SportsNewsView from "../views/SportsNewsView";
-import UserWiew from "../views/UserWiew";
+import { userRoutes } from "./userRoutes";
 
 const Router = () => {
   const routes = useRoutes([
     {
       path: "/",
       element: <HomeView />,
-    },
+      },
+      
+        userRoutes,
 
     {
       path: "/parametre/:id",
