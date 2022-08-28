@@ -56,11 +56,8 @@ function App() {
 
           <Route path="/haberler" element={<NewView />}>
             <Route path="ekonomihaberleri" element={<EconomyNewsView />}>
-              <Route
-                index
-                element={<div>Ekonomi haberleri numarası seç</div>}
-              />
-              <Route path=":id" element={<EconomyNewsView />} />
+            
+      
             </Route>
           </Route>
         </Routes>
