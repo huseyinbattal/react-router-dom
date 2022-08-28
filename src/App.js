@@ -56,8 +56,8 @@ function App() {
             <Route index element={<div>Lütfen bir haber kategorisi seçin</div>} />
             <Route path="sporhaberleri" element={<SportsNewsView />} />
             <Route path="ekonomihaberleri" element={<EconomyNewsView />} >
-
-                <Route path=":id" element={ <EconomyNewsView/>} />
+              <Route index element={<div>Ekonomi haberleri numarası seç</div>} />
+              <Route path=":id" element={ <EconomyNewsView/>} />
             </Route>
           
 

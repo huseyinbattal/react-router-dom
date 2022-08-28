@@ -1,10 +1,10 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Outlet,useParams } from 'react-router-dom'
 
 function EconomyNewsView() {
     const {id}=useParams()
   return (
-    <div>Ekonomi Haberleri</div>
+    <div><Outlet/> {id} </div>
   )
 }
 
