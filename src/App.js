@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link,NavLink } from "react-router-dom";
 import HomeView from "./views/HomeView";
 import UserWiew from "./views/UserWiew";
 import ParametreView from "./views/ParametreView";
@@ -19,19 +19,19 @@ function App() {
           margin: "10px",
         }}
       >
-        <Link to="/">Ana Sayfa</Link>
+        <NavLink to="/" style={({isActive}) => isActive?{backgroundColor:"red":undefined}} >Ana Sayfa</NavLink>
         <br />
-        <Link to="/kullanici">Kullanıcı</Link>
+        <NavLink to="/kullanici">Kullanıcı</NavLink>
         <br />
-        <Link to="/parametre/abc-123">Parametre Sayfası</Link>
+        <NavLink to="/parametre/abc-123">Parametre Sayfası</NavLink>
         <br />
-        <Link to="/queryparametre?w=1111x1121&w=9999">Query Sayfası</Link>
+        <NavLink to="/queryparametre?w=1111x1121&w=9999">Query Sayfası</NavLink>
         <br />
-        <Link to="/haberler">Haberler</Link>
+        <NavLink to="/haberler">Haberler</NavLink>
         <br />
-        <Link to="/haberler/sporhaberleri">Spor Haberleri</Link>
+        <NavLink to="/haberler/sporhaberleri">Spor Haberleri</NavLink>
         <br />
-        <Link to="/haberler/ekonomihaberleri">Ekonomi Haberleri</Link>
+        <NavLink to="/haberler/ekonomihaberleri">Ekonomi Haberleri</NavLink>
       </div>
 
       <hr />
@@ -52,16 +52,20 @@ function App() {
           <Route path="/queryparametre" element={<QueryParamsViews />} />
 
           <Route path="/haberler" element={<NewView />}>
-
-            <Route index element={<div>Lütfen bir haber kategorisi seçin</div>} />
+            <Route
+              index
+              element={<div>Lütfen bir haber kategorisi seçin</div>}
+            />
             <Route path="sporhaberleri" element={<SportsNewsView />} />
-            <Route path="ekonomihaberleri" element={<EconomyNewsView />} >
-              <Route index element={<div>Ekonomi haberleri numarası seç</div>} />
-              <Route path=":id" element={ <EconomyNewsView/>} />
+            <Route path="ekonomihaberleri" element={<EconomyNewsView />}>
+              <Route
+                index
+                element={<div>Ekonomi haberleri numarası seç</div>}
+              />
+              <Route path=":id" element={<EconomyNewsView />} />
             </Route>
-          
-
           </Route>
+          <Route path="*" element={<div>404 Not Found!!!</div>}></Route>
         </Routes>
       </div>
     </div>
