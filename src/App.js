@@ -1,5 +1,6 @@
 import "./App.css";
 import { NavLink } from "react-router-dom";
+import Router from "./router/Router";
 
 function App() {
   return (
@@ -62,7 +63,9 @@ function App() {
           borderRadius: "50px",
           margin: "10px",
         }}
-      ></div>
+      >
+        <Router />
+      </div>
     </div>
   );
 }
