@@ -52,14 +52,13 @@ function App() {
         }}
       >
         <Routes>
-          <Route path="/queryparametre" element={<QueryParamsViews />} />
+  
 
-          <Route path="/haberler" element={<NewView />}>
-            <Route path="ekonomihaberleri" element={<EconomyNewsView />}>
+        
             
-      
-            </Route>
-          </Route>
+              <Route path=":id" element={<EconomyNewsView />} />
+    
+          
         </Routes>
       </div>
     </div>
