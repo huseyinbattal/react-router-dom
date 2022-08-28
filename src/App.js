@@ -52,9 +52,6 @@ function App() {
         }}
       >
         <Routes>
-          <Route path="/" element={<HomeView />} />
-          <Route path="/kullanici" element={<UserWiew />} />
-          <Route path="/parametre/:id" element={<ParametreView />} />
           <Route path="/queryparametre" element={<QueryParamsViews />} />
 
           <Route path="/haberler" element={<NewView />}>
