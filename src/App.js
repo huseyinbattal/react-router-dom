@@ -19,11 +19,17 @@ function App() {
           margin: "10px",
         }}
       >
-        <NavLink to="/" style={({isActive}) => isActive?{backgroundColor:"red":undefined}} >Ana Sayfa</NavLink>
+        <NavLink to="/" style={(params) => {
+          return params.isActive ? { backgroundColor: "red",color:"white" } : undefined;
+        }} >Ana Sayfa</NavLink>
         <br />
-        <NavLink to="/kullanici">Kullanıcı</NavLink>
+        <NavLink  style={(params) => {
+          return params.isActive ? { backgroundColor: "red",color:"white" } : undefined;
+        }}  to="/kullanici">Kullanıcı</NavLink>
         <br />
-        <NavLink to="/parametre/abc-123">Parametre Sayfası</NavLink>
+        <NavLink className={(params) => {
+          return params.isActive?"active":""
+        }} to="/parametre/abc-123">Parametre Sayfası</NavLink>
         <br />
         <NavLink to="/queryparametre?w=1111x1121&w=9999">Query Sayfası</NavLink>
         <br />
