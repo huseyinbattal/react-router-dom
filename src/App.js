@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <div
         style={{
-          backgroundColor: "pink",
+          backgroundColor: "lightgreen",
           padding: "10px",
-          borderRadius: "50px",
+          borderRadius: "30px",
           margin: "10px",
         }}
       >
@@ -38,9 +38,9 @@ function App() {
 
       <div
         style={{
-          backgroundColor: "green",
+          backgroundColor: "lightgreen",
           padding: "10px",
-          color: "white",
+          color: "red",
           borderRadius: "50px",
           margin: "10px",
         }}
@@ -55,8 +55,11 @@ function App() {
 
             <Route index element={<div>Lütfen bir haber kategorisi seçin</div>} />
             <Route path="sporhaberleri" element={<SportsNewsView />} />
-            <Route path="ekonomihaberleri" element={<EconomyNewsView />} />
-            <Route path=":id" element={ <EconomyNewsView/>} />
+            <Route path="ekonomihaberleri" element={<EconomyNewsView />} >
+
+                <Route path=":id" element={ <EconomyNewsView/>} />
+            </Route>
+          
 
           </Route>
         </Routes>
