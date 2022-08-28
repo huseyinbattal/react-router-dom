@@ -60,7 +60,7 @@ function App() {
           <Route path="/haberler" element={<NewView />}>
             <Route
               index
-              element={<div>Lütfen bir haber kategorisi seçin</div>}
+              element={Navigate to="sporhaberleri"}
             />
             <Route path="sporhaberleri" element={<SportsNewsView />} />
             <Route path="ekonomihaberleri" element={<EconomyNewsView />}>
