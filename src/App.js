@@ -20,7 +20,10 @@ function App() {
       <br/>
       <Link to="/queryparametre?w=1111x1121&w=9999">Query Sayfası</Link>
       <br/>
-      <Link to="/haberler">Haberler</Link>
+        <Link to="/haberler">Haberler</Link>
+        <br />
+      <Link to="/haberler/sporhaberleri">Spor Haberleri</Link>
+        
       </div>
 
 <hr/>
@@ -32,7 +35,7 @@ function App() {
         <Route path="/parametre/:id" element={<ParametreView/>} />
         <Route path="/queryparametre" element={<QueryParamsViews />} />
           <Route path="/haberler" element={<NewView />} >
-            <Route path="/sporhaberleri" element={<SportsNewsView/>} />
+            <Route path="sporhaberleri" element={<SportsNewsView/>} />
         </Route>
       </Routes>
     </div>
