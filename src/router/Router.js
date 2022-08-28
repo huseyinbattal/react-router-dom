@@ -1,4 +1,5 @@
 import { useRoutes } from 'react-router-dom'
+import EconomyNewsView from '../views/EconomyNewsView'
 import HomeView from '../views/HomeView'
 import NewView from '../views/NewView'
 import ParametreView from '../views/ParametreView'
@@ -33,6 +34,13 @@ const Router = () => {
                     {
                         path: "/sporhaberleri",
                         element:<SportsNewsView/>
+                    },
+                    {
+                        path: "/ekonomihaberleri",
+                        element: <EconomyNewsView />,
+                        children: [
+                            
+                        ]
 }
                 ]
             },
