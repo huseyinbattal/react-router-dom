@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link,NavLink } from "react-router-dom";
+import { Routes, Route,NavLink,Navigate } from "react-router-dom";
 import HomeView from "./views/HomeView";
 import UserWiew from "./views/UserWiew";
 import ParametreView from "./views/ParametreView";
@@ -60,7 +60,7 @@ function App() {
           <Route path="/haberler" element={<NewView />}>
             <Route
               index
-              element={Navigate to="sporhaberleri"}
+              element={<Navigate to="/haberler/sporhaberleri"/>}
             />
             <Route path="sporhaberleri" element={<SportsNewsView />} />
             <Route path="ekonomihaberleri" element={<EconomyNewsView />}>
