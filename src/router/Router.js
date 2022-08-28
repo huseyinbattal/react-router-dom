@@ -39,7 +39,10 @@ const Router = () => {
                         path: "/ekonomihaberleri",
                         element: <EconomyNewsView />,
                         children: [
-                            
+                            {
+                                path: ":id",
+                            element:<EconomyNewsView/>
+                           }
                         ]
 }
                 ]
@@ -51,7 +54,7 @@ const Router = () => {
 
         ]
     )
-  
+  return routes
 }
 
 export default Router
